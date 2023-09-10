@@ -90,3 +90,12 @@ nav ul li a:hover{
     position: relative;
     left: 60px;
 }
+
+section p{
+    width: 600px;
+    text-align: justify;
+    position: relative;
+    left: 80px;
+    bottom: 150px;
+    line-height: 22px;
+}
