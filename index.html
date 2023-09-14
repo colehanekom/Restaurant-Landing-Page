@@ -12,7 +12,25 @@
             <div class="logo">
                 <img src="logo.png" alt="logo">
             </div>
-            <ul>
+             <!-- Hamburger icon for mobile -->
+             <div class="hamburger" onclick="toggleMobileMenu()">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+            <ul class="desktop-menu">
+                <li><a href="">Home</a></li>
+                <li><a href="">About</a></li>
+                <li><a href="">Menu</a></li>
+                <li><a href="">Review</a></li>
+                <li><a href="">Order</a></li>
+            </ul>
+            <ul class="mobile-menu">
+                  <!-- Close icon -->
+                  <li class="close-icon" onclick="toggleMobileMenu()">
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                </li>
                 <li><a href="">Home</a></li>
                 <li><a href="">About</a></li>
                 <li><a href="">Menu</a></li>
@@ -36,5 +54,13 @@
                 <button>Order Now</button>
             </div>
     </section>
+
+    <script>
+        function toggleMobileMenu() {
+            var mobileMenu = document.querySelector('.mobile-menu');
+            mobileMenu.classList.toggle('active');
+        }
+    </script>
+    
 </body>
 </html>

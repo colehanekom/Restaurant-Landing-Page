@@ -107,3 +107,138 @@ section p{
     color: #fac031;
     padding: 10px 20px;
 }
+
+/* Hamburger icon */
+.hamburger {
+    display: none; /* Initially hidden on larger screens */
+    cursor: pointer;
+    padding: 10px;
+}
+
+.bar {
+    width: 30px;
+    height: 3px;
+    background-color: black;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+/* Mobile menu */
+.mobile-menu {
+    list-style: none;
+    display: none; /* Initially hidden */
+    background: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 80px;
+    left: 0;
+    width: 100%;
+    padding: 20px;
+    z-index: 1;
+}
+
+.mobile-menu li {
+    margin: 10px 0;
+}
+
+/* Close icon */
+.close-icon {
+    display: flex;
+    flex-direction: center;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.close-icon .bar {
+    width: 30px;
+    height: 3px;
+    background-color: black;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+.close-icon .bar:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.close-icon .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.close-icon .bar:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
+
+/* Media query for screens smaller than 768px (typical mobile devices) */
+@media (max-width: 768px) {
+    section nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .logo img {
+        margin: 20px 0;
+    }
+
+    nav ul {
+        margin: 20px 0;
+        text-align: center;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .main {
+        flex-direction: column;
+        text-align: center;
+        top: 20px;
+    }
+
+    .main .main-text h1 {
+        font-size: 36px;
+        top: 0;
+        left: 0;
+        margin-bottom: 10px;
+    }
+
+    .main .main-text h1 span {
+        font-size: 50px;
+    }
+
+    .main-image img {
+        width: 100%;
+        left: 0;
+    }
+
+    section p {
+        width: 100%;
+        left: 0;
+        bottom: 0;
+        margin-bottom: 20px;
+        top: 15px;
+    }
+
+    .main-btn button {
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        padding: 15px 0;
+    }
+
+    /* Show hamburger icon and hide desktop menu */
+    .hamburger {
+        display: block;
+    }
+
+    .desktop-menu {
+        display: none;
+    }
+
+    /* Show mobile menu when hamburger icon is clicked */
+    .mobile-menu.active {
+        display: block;
+    }
+}
